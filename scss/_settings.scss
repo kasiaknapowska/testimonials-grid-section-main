@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: $light-grayish-blue;
+}
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 0;
+  @media screen and ($desktop-s) {
+    height: calc(100vh - 12px); //attribution height + 1px (maybe line-height)
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

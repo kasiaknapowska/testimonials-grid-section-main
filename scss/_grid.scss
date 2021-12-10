@@ -1,0 +1,29 @@
+@use "sass:math";
+
+$columns: 4;
+$column-base-width: math.div(100%, $columns);
+$columns-nested: 3;
+$columns-nested-base-width: math.div(100%, $columns-nested);
+
+[class^='col-']:not(.col-3), [class^='coln-'] {
+    min-height: 1px;
+    padding: 1.5rem 1.5rem;
+    margin: .5rem .5rem;
+    border-radius: .5rem;
+    }
+    @media screen and ($desktop-s) {
+        .row {
+            display: flex;
+            @for $i from 1 through $columns {
+                .col-#{$i} {
+                    width: $column-base-width * $i;
+                }
+            }
+            @for $i from 1 through $columns-nested {
+                .coln-#{$i} {
+                    width: $columns-nested-base-width * $i;
+                }
+            }
+        }
+    }
+   

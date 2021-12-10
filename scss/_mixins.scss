@@ -1,0 +1,7 @@
+@mixin webfont($size, $weight, $opacity) {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+    opacity: $opacity;
+    @content;
+}
